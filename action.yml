@@ -13,8 +13,6 @@ runs:
             git config user.email github-actions@github.com
             git checkout master
             git remote add service ${{ inputs.source-repo }} 
-            git fetch service
-            git config pull.rebase false
             git pull service master
             git push origin master
         shell: bash
