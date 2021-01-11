@@ -11,7 +11,7 @@ runs:
       - run: |
             git config user.name github-actions
             git config user.email github-actions@github.com
-            git checkout main
+            git checkout master
             git remote add service ${{ inputs.source-repo }} 
             git fetch service
             git config pull.rebase false
