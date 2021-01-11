@@ -13,6 +13,7 @@ runs:
             git config user.email github-actions@github.com
             git checkout master
             git remote add service ${{ inputs.source-repo }} 
-            git pull service master
+            git fetch service
+            git pull service master --allow-unrelated-histories 
             git push origin master
         shell: bash
